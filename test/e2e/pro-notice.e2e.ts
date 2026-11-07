@@ -7,7 +7,7 @@ import { pluginId } from './load';
 const BASE = 'Bases Row Deltas/Readings.base';
 const NOTE = 'Bases Row Deltas/Notes/North 02.md';
 const LEAD = 'Second and third properties, row offsets and change per day are Pro features.';
-const PITCH = 'Sponsor on GitHub, then sign in from the plugin settings.';
+const PITCH = 'One payment turns on Pro in every NoteMods plugin. Sponsor on GitHub, then sign in from the plugin settings.';
 
 interface Shown { text: string; buttons: number }
 interface ViewState { cells: number; pro: boolean; value: string }
@@ -73,7 +73,7 @@ describe(`${pluginId} Pro notice`, function () {
 			}
 			return opened;
 		});
-		expect(url).toBe(`https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=${pluginId}`);
+		expect(url).toBe(`https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=${pluginId}-all`);
 	});
 
 	it('does not show the notice again when Bases sends new data for the same options', async function () {
