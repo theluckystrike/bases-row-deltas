@@ -73,7 +73,7 @@ describe(`${pluginId} Pro notice`, function () {
 			}
 			return opened;
 		});
-		expect(url).toBe(`https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=${pluginId}-all`);
+		expect(url).toBe(`https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&frequency=one-time&metadata_source=${pluginId}-all`);
 	});
 
 	it('does not show the notice again when Bases sends new data for the same options', async function () {
